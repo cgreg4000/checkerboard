@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>***Checkerboard***</h1>
+    <div class="container">
+        {% for i in range(1, x + 1): %}
+            {% if i % 2 != 0: %}
+        <div class="row">
+            {% for j in range(1, y + 1): %}
+                {% if j % 2 != 0: %}
+                <div class="column red"></div>
+                {% else: %}
+                <div class="column black"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+            {% else: %}
+        <div class="row">
+            {% for j in range(1, y + 1): %}
+                {% if j % 2 != 0: %}
+                <div class="column black"></div>
+                {% else: %}
+                <div class="column red"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
